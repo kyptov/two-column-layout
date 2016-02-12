@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two column layout</title>
+    <style>
+        .item {
+            background-color: aliceblue;
+            border: 2px solid darkgrey;
+            border-radius: 5px;
+            margin-bottom: 4px;
+        }
+
+        .item.full {
+            width: 200%;
+        }
+
+        .item.empty {
+            opacity: 0;
+            border: 0;
+        }
+
+        .item.pos-first {
+            border-top-color: orangered;
+        }
+
+        .item.pos-left {
+            border-left-color: orangered;
+        }
+
+        .item.pos-right {
+            border-right-color: orangered;
+        }
+
+        .item.pos-last {
+            border-bottom-color: orangered;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .layout {
+            margin: 0 auto;
+            width: 80%;
+            padding: 30px;
+            border: 1px solid lightgray;
+            display: flex;
+        }
+
+        .column {
+            width: 50%;
+            margin: 2px;
+        }
+
+    </style>
+    <script src="jquery-2.2.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="layout">
+    <div class="column left">
+        <div class="inner"></div>
+    </div>
+    <div class="column right">
+        <div class="inner"></div>
+    </div>
+</div>
+<div class="elements hidden">
+    <div class="item" style="height: 50px;"></div>
+    <div class="item full" style="height: 100px;"></div>
+    <div class="item full" style="height: 204px;"></div>
+    <div class="item" style="height: 125px;"></div>
+    <div class="item" style="height: 50px;"></div>
+    <div class="item" style="height: 459px;"></div>
+    <div class="item" style="height: 234px;"></div>
+    <div class="item" style="height: 345px;"></div>
+    <div class="item" style="height: 50px;"></div>
+    <div class="item" style="height: 275px;"></div>
+</div>
+
+</body>
+</html>
